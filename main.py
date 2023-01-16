@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request
 from pokemon import Pokemon
+from retrieve import retrieve_all
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    pokemons = retrieve_all()
+    return render_template('index.html', pokemons=pokemons)
 
 @app.route('/', methods=['POST'])
 def index_post():
