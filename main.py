@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     pokemons = retrieve_all()
-    return render_template('index.html', pokemons=pokemons)
+    return render_template(['index.html', 'gallery.html'], pokemons=pokemons)
 
 @app.route('/', methods=['POST'])
 def index_post():
@@ -24,8 +24,8 @@ def pokemon_details(pokemon_name):
     pokemonSprite = pokemon.sprite()
     pokemonShinySprite = pokemon.shiny_sprite()
     pokemonAbilities = pokemon.abilities()
-    return render_template('pokemon.html', pokemonName=pokemonName, pokemonSprite=pokemonSprite, pokemonShinySprite=pokemonShinySprite, pokemonAbilities=pokemonAbilities)
-
+    pokemonType = pokemon.type()
+    return render_template('pokemon.html', pokemonName=pokemonName, pokemonSprite=pokemonSprite, pokemonShinySprite=pokemonShinySprite, pokemonAbilities=pokemonAbilities, pokemonType=pokemonType)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
