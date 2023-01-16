@@ -30,9 +30,3 @@ class Pokemon:
         for i in range(len(pokemon_abilities)):
             abilities_list.append(pokemon_abilities[i]['ability']['name'])
         return abilities_list
-
-pokemon = Pokemon('https://pokeapi.co/api/v2/pokemon/ditto')
-
-
-
-    
