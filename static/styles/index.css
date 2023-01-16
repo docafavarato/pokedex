@@ -1,0 +1,9 @@
+.gallery {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    -moz-column-gap:5px;
+    column-count:5;
+    column-gap:5px;
+}
+
+.gallery img, .gallery video {width: 100% !important; height: auto !important; border-style: solid; border-color: rgb(182, 181, 179); border-radius: 50px;}
