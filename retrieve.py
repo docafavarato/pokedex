@@ -17,6 +17,6 @@ def retrieve_all():
 
         for future in concurrent.futures.as_completed(results):
             data = future.result()
-            pokemons[data['forms'][0]['name']] = data['sprites']['other']['official-artwork']['front_default']
+            pokemons[data['forms'][0]['name']] = [data['sprites']['other']['official-artwork']['front_default'], data['types'][0]['type']['name']]
 
     return pokemons
