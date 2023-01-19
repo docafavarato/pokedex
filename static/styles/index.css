@@ -1,4 +1,4 @@
-html img {width: 100% !important; height: auto !important;}
+#pokemonImage {width: 100% !important; height: auto !important;}
 
 .image-list-small {
     font-family: Arial, Helvetica, sans-serif;
