@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,7 +17,15 @@
             {% for ability in pokemonAbilities %}
                 <li class="list-group-item">{{ ability.title() }}</li>
             {% endfor %}
+        </ul>   
+        <br>
+        <h1>Tipo</h1>
+        <ul class="list-group">
+            <li class="list-group-item">{{ pokemonType.title() }}</li>
         </ul>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="location.href='{{ url_for('index') }}'">Início</button>
     </div>
+    
 </body>
 </html>
