@@ -28,7 +28,7 @@
             <ul class="image-list-small">
                 {% for pokemon in pokemons %}
                 <li>
-                    <a href="{{ url_for('pokemon_details', pokemon_name=pokemon) }}"><img src="{{ pokemons[pokemon][0] }}" alt=""></a>
+                    <a href="{{ url_for('pokemon_details', pokemon_name=pokemon) }}"><img id="pokemonImage" src="{{ pokemons[pokemon][0] }}" alt=""></a>
                     <div class="details">
                         <h3><a href="#">{{ pokemon.title() }}</a></h3>
                         <p class="type">{{ pokemons[pokemon][1].title() }}</p>
